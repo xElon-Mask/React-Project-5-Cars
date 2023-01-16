@@ -1,11 +1,12 @@
 import React from "react";
+import Wrapper from "./Wrapper";
 
 const Car = (props) => {
   return (
-    <div className="cars">
+    <Wrapper>
       <p>Marque : {props.children}</p>
       <p>Couleur : {props.color}</p>
-    </div>
+    </Wrapper>
   );
 };
 
