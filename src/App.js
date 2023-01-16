@@ -1,6 +1,5 @@
 import { Component } from "react";
 import Mycars from "./components/Mycars";
-import Cars from "./components/Cars";
 import "./App.css";
 
 class App extends Component {
@@ -8,7 +7,6 @@ class App extends Component {
     return (
       <div className="App">
         <Mycars />
-        <Cars />
       </div>
     );
   }
