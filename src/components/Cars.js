@@ -1,13 +1,17 @@
-import React from "react";
-import Wrapper from "./Wrapper";
+const Car = ({color, children}) => {
 
-const Car = (props) => {
-  return (
-    <Wrapper>
-      <p>Marque : {props.children}</p>
-      <p>Couleur : {props.color}</p>
-    </Wrapper>
-  );
-};
+    const colorInfo = color ? <p>Couleur: {color}</p> : <p>Couleur: "Néant"</p>;
 
-export default Car;
+    if (children) {
+        return (
+            <div style={ {backgroundColor: 'pink', width: '400px', padding: '10px', margin: '5px auto'} }>
+                <p>Marque: { children }</p>
+                {colorInfo}
+            </div>
+        )
+    }
+
+    // return null // ce return est Facultatif
+}
+
+export default Car
